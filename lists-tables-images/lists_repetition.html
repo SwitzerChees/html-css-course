@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lists</title>
+    <style>
+      /* ol {
+        list-style-type: circle;
+      }
+      ul {
+        list-style-type: decimal;
+      } */
+      .list-circle {
+        list-style-type: circle;
+      }
+      #my-list {
+        list-style-type: decimal;
+      }
+      ol li {
+        background-color: blue;
+      }
+      ol li:hover {
+        background-color: red;
+        font-size: large;
+        transition: all 0.5s;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      table tr {
+        border: 1px solid black;
+      }
+      table tr:nth-child(odd):hover {
+        background-color: gray;
+      }
+      table thead tr th {
+        border: 1px solid black;
+        background-color: yellow;
+      }
+      table thead tr th:hover {
+        background-color: gray;
+      }
+      img {
+        width: 50%;
+      }
+      body {
+        background-color: yellow;
+      }
+      @media screen and (max-width: 900px) {
+        body {
+          background-color: orange;
+        }
+      }
+      @media screen and (max-width: 600px) {
+        img {
+          width: 100%;
+        }
+        body {
+          background-color: red;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <ol>
+      <li>Item</li>
+      <li>Item</li>
+      <li>Item</li>
+    </ol>
+    <ul id="my-list">
+      <li>Item</li>
+      <li>Item</li>
+      <li>Item</li>
+    </ul>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Age</th>
+          <th>City</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>John</td>
+          <td>45</td>
+          <td>London</td>
+        </tr>
+        <tr>
+          <td>John2</td>
+          <td>50</td>
+          <td>London</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="3">Footer</td>
+        </tr>
+      </tfoot>
+    </table>
+    <br />
+    <br />
+    <br />
+    <br />
+    <img
+      src="alpaca.jpeg"
+      alt="Image not Loaded"
+      title="This a an Alpaca"
+      loading="eager"
+    />
+  </body>
+</html>
