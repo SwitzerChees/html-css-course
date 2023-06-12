@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Form</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        // const colorPicker = document.getElementById("colorPicker");
+        // const contactContainer = document.getElementById("contactContainer");
+        // colorPicker.addEventListener("change", (e) => {
+        //   contactContainer.style.backgroundColor = e.target.value;
+        // });
+        const contactForm = document.getElementById("contactForm");
+        contactForm.addEventListener("submit", async (e) => {
+          e.preventDefault();
+          const formData = new FormData(contactForm);
+          const data = Object.fromEntries(formData);
+          console.log(data);
+          await fetch("/api/contact", {
+            method: "POST",
+            body: formData,
+          });
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div class="contact-container" id="contactContainer">
+      <h1>Contact Form</h1>
+      <form id="contactForm" action="/contact.php" method="post">
+        <div class="two-columns">
+          <div class="flex-columns">
+            <label for="firstName">First Name</label>
+            <input
+              type="text"
+              name="firstName"
+              placeholder="FirstName..."
+              value="John"
+              required
+            />
+          </div>
+          <div class="flex-columns">
+            <label for="lastName">Last Name</label>
+            <input
+              type="text"
+              name="lastName"
+              placeholder="LastName..."
+              required
+            />
+          </div>
+        </div>
+        <div class="flex-columns">
+          <label for="email">E-Mail</label>
+          <input type="email" name="email" placeholder="Email..." />
+        </div>
+        <div class="flex-columns">
+          <label for="message">Message</label>
+          <textarea placeholder="Message..." rows="5" name="message"></textarea>
+        </div>
+        <!-- <input type="date" name="date" />
+        <div>
+          <input type="checkbox" name="agb" />
+          <label for="agb">AGB</label>
+        </div>
+        <div class="flex-columns">
+          <label for="favColor">Favourite Color</label>
+          <input type="color" name="favColor" id="colorPicker" />
+        </div>
+        <input type="file" name="file" />
+        <input type="datetime-local" name="datetime" />
+        <input type="number" name="number" /> -->
+        <button type="submit" class="fancy-button">Submit</button>
+      </form>
+    </div>
+  </body>
+</html>

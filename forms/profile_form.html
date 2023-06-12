@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Profile Update Form</title>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #f8f9fa;
+            font-family: Arial, sans-serif;
+        }
+
+        .profile-form {
+            width: 300px;
+            padding: 16px;
+            background-color: #ffffff;
+            border: 1px solid #ced4da;
+            border-radius: 4px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .profile-form label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .profile-form input, .profile-form select {
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #ced4da;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .profile-form button {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            background-color: #007bff;
+            color: #ffffff;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .profile-form button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="profile-form">
+        <h2>Profile Update</h2>
+        <form>
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required title="Please enter your name" oninvalid="this.setCustomValidity('Please enter your name')" oninput="this.setCustomValidity('')">
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required title="Please enter a valid email" oninvalid="this.setCustomValidity('Please enter a valid email')" oninput="this.setCustomValidity('')">
+
+            <label for="favColor">Favorite Color</label>
+            <input type="color" id="favColor" name="favColor">
+
+            <label for="newsletter">Subscribe to our newsletter</label>
+            <input type="checkbox" id="newsletter" name="newsletter">
+            
+            <button type="submit">Update Profile</button>
+        </form>
+    </div>
+</body>
+</html>
