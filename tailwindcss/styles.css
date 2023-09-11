@@ -7,3 +7,6 @@
 .text-color-red {
   color: red;
 }
+.text-color-red:hover {
+  color: orange;
+}
