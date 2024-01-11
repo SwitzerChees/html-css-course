@@ -27,7 +27,6 @@ body {
 .grid-template {
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
-  grid-template-rows: repeat(3, 100px);
   gap: 20px;
 }
 
@@ -44,5 +43,4 @@ body {
 
 .box-size-auto {
   width: auto;
-  height: auto;
 }
